@@ -1,0 +1,146 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<meta charset="UTF8"/> <!-- Afficher les caractère spéciaux -->
+		<title> TAHITI CODE CAMP - Galerie </title> 
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style-galerie.css"/>
+    <link rel="icon" href="asset/icon.jpg" type="image/x-icon">	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  	<script src="js/jquery-slim.min.js"></script>
+	  <script src="js/bootstrap.min.js"></script>
+  	<script src="js/popper.min.js"></script>
+	  <script src="js/script.js"></script>
+	
+	</head>
+
+	<body>
+        <div class="logo" >
+             <img class="image-logo" src="asset/favicon.png"  alt="LOGO Tahiti code camp"/> 
+         </div>
+        
+         <nav class="topnav" id="myTopnav">
+            <a href="javascript:void(0);" onclick="myFunction(this)">
+                <div class="icon">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                  </div>
+              </a>	
+          <a href="index.html">Accueil</a>
+          <a href="equipe.html">Equipe</a>
+          <a href="partenaire.html">Partenaire</a>
+          <a href="galerie.html">Galerie</a>
+          <a href="contact.html">Contact</a>
+        
+      </nav>
+        
+        <h1>Galerie</h1>
+
+		 <!-- Container for the image gallery -->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="asset/img1.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="asset/img2.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="asset/img3.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="asset/img4.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="asset/img5.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="img_snow_wide.jpg" style="width:100%">
+    </div>
+  
+    <!-- Button suivant -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+  
+    <!-- Galerie images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="asset/img1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="asset/img2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="asset/img3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="asset/img4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="asset/img5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+      </div>
+    </div>
+  </div> 
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }   
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+    } 
+	
+</script>		
+		
+
+		
+		<img class="footer-img" src="asset/header.jpg"/>
+	</body>
+</html> 
