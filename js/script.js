@@ -1,10 +1,10 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function myFunction(a) {
     var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
+    if (x.className === "topnav sticky-top") {
         x.className += " responsive";
         } else {
-            x.className = "topnav";}
+            x.className = "topnav sticky-top";}
     a.classList.toggle("change");
 } 
 
@@ -12,10 +12,8 @@ function myFunction(a) {
 // COMPTE A REBOURS
 function timerfunction(){
 
-    console.log('Test')
-
 // Set the date we're counting down to
-var countDownDate = new Date("Jun 30, 2018 15:37:25").getTime();
+var countDownDate = new Date("Jun 22, 2018 15:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -33,7 +31,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  document.getElementById("demo").innerHTML = days + "j " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
   // If the count down is finished, write some text

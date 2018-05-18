@@ -3,3 +3,19 @@
     background:red  ;
     height: auto;
 }
+
+h4, h6{
+    text-align: center;
+    height: 65px;
+}
+
+
+#myBtnContainer{
+    padding: 1em;
+
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
